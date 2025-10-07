@@ -1,50 +1,62 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report:
+- Version change: 2.1.1 → 1.0.0
+- Modified principles: All principles replaced
+- Added sections: Development Standards, Quality Gates
+- Removed sections: None (structure preserved)
+- Templates requiring updates:
+  ✅ plan-template.md - Constitution Check section updated
+  ✅ spec-template.md - Requirements alignment maintained
+  ✅ tasks-template.md - Task categorization preserved
+  ✅ All command files - No outdated references found
+- Follow-up TODOs: RATIFICATION_DATE marked as TODO
+-->
+
+# SINQ4LogicsParsing Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Code Quality Standards (NON-NEGOTIABLE)
+All code MUST follow consistent style guidelines with automated linting and formatting. Code reviews MUST enforce readability, maintainability, and adherence to established patterns. Every function MUST have clear documentation and follow single responsibility principle. Code duplication MUST be eliminated through abstraction and reuse.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Comprehensive Testing Standards
+Test-Driven Development (TDD) is mandatory: Tests written → User approved → Tests fail → Then implement. All new features MUST include unit tests, integration tests, and end-to-end tests. Test coverage MUST exceed 80% for critical paths. Contract tests MUST validate API specifications before implementation.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. User Experience Consistency
+User interfaces and APIs MUST maintain consistent behavior, error handling, and response formats. All user-facing features MUST include clear documentation and intuitive workflows. Performance degradation MUST be measured and prevented through monitoring and optimization.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Performance Requirements
+All features MUST meet defined performance targets including response times, throughput, and resource utilization. Performance testing MUST be integrated into the development lifecycle. Critical paths MUST be optimized for efficiency and scalability.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+## Development Standards
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+### Code Quality Gates
+- Automated linting and formatting on every commit
+- Code review required for all changes
+- Documentation requirements for public APIs
+- Performance benchmarks for critical operations
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+### Testing Requirements
+- Unit tests for all business logic
+- Integration tests for component interactions
+- End-to-end tests for user workflows
+- Performance tests for critical paths
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+## Quality Gates
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+### Pre-commit Requirements
+- All tests MUST pass
+- Code coverage MUST meet minimum thresholds
+- Linting and formatting MUST be enforced
+- Performance benchmarks MUST be maintained
+
+### Release Requirements
+- All automated tests MUST pass
+- Performance regression tests MUST succeed
+- Security scans MUST complete without critical issues
+- Documentation MUST be updated and accurate
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+This constitution supersedes all other development practices. Amendments require documentation of rationale, approval from project maintainers, and migration plan for existing code. All pull requests and code reviews MUST verify compliance with these principles. Complexity MUST be justified with clear business value. Use CLAUDE.md for runtime development guidance.
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
-
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: TODO(RATIFICATION_DATE): Original adoption date unknown | **Last Amended**: 2025-10-07
